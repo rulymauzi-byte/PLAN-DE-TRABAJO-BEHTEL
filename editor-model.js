@@ -1,0 +1,4 @@
+import {validatePlan,MONTHS} from './core.js';
+export function newPlan(year){if(!Number.isInteger(year)||year<2000||year>2099)throw Error('Elija un año entre 2000 y 2099.');return{year,planTitle:'PLAN DE TRABAJO IGLESIA BETHEL '+year,meta:{slogan:'',objEspecifico:'',vision:'',mision:''},settings:{},catalogs:{},months:MONTHS.map((name,i)=>({id:'month-'+(i+1),name,objEspecifico:'',rows:[]}))};}
+export function readDraft(text,year){let plan;try{plan=JSON.parse(text)}catch{throw Error('No se pudo leer el archivo JSON.');}validatePlan(plan);return{...plan,year};}
+export function addActivity(plan,monthIndex){const copy=structuredClone(plan);if(!copy.months[monthIndex])throw Error('Mes inválido.');copy.months[monthIndex].rows.push({fecha:'',hora:'',actividades:'',dia:'',lugar:'',responsable:'',presupuesto:''});return copy;}

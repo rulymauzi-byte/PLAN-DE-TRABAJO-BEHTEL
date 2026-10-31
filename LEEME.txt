@@ -1,0 +1,25 @@
+CONEXION A GOOGLE SHEETS - IGLESIA BETHEL
+
+1. Cree una hoja privada y abra Extensiones > Apps Script.
+2. Pegue apps-script/Code.gs. En Configuración del proyecto active mostrar appsscript.json y copie el manifiesto incluido.
+3. Ejecute prepararBethel. Google le pedirá el permiso de hojas de cálculo que autorizó preparar.
+4. En Configuracion!B2 escriba la contraseña inicial indicada. La celda se vacía al procesarla.
+5. Implemente como aplicación web: ejecutar como usted, acceso cualquiera.
+   El plan se puede consultar públicamente. Agregar un año exige contraseña.
+6. Copie el enlace terminado en /exec a sheetsApiUrl en public/config.json y publique la app.
+   También puede usar Conexión de datos en la pantalla de acceso.
+7. Entre desde PC o celular, prepare un año nuevo y pulse Enviar datos.
+   Los borradores se guardan automáticamente en cada navegador. Solo se comparten al enviar el año completo.
+   Los años publicados no se pueden reemplazar desde el servicio.
+
+CAMBIAR CONTRASEÑA
+Escriba una nueva contraseña de 12 caracteres o más en Configuracion!B2. Al procesarla se vacía la celda y se cierran las sesiones anteriores.
+No publique su hoja ni incluya la contraseña en el código de la web.
+
+Los textos y datos adicionales se conservan en Planes; las filas se guardan en Actividades.
+Use Objetivos específicos: ya no hay un campo Tema en el formulario.
+No cambie los encabezados ni los nombres de las pestañas.
+Esta plantilla no se ha desplegado en Google. Compruebe acceso, lectura y envío de un año nuevo tras implementarla.
+El código solo abre la hoja configurada. Preparar el permiso no concede acceso ahora a su cuenta.
+La conexión no se ha probado con 2,000 dispositivos simultáneos; Apps Script tiene límites de servicio.
+Las notificaciones de calendario requieren abrir el .ics y confirmar la importación en el teléfono.
