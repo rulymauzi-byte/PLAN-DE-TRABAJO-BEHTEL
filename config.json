@@ -1,3 +1,4 @@
 {
-  "sheetsApiUrl": "https://script.google.com/macros/s/AKfycbw81IlozPXMFwXrZgXAzhMxiARh-TE9B7Pp97VyzAY1apvtlZ3JgAknyJQbj6wESavajQ/exec"
+  "sheetsApiUrl": "https://script.google.com/macros/s/AKfycbw81IlozPXMFwXrZgXAzhMxiARh-TE9B7Pp97VyzAY1apvtlZ3JgAknyJQbj6wESavajQ/exec",
+  "calendarApiUrl": "https://script.google.com/macros/s/AKfycbzZlhA6Oa54yq7VllPMlLfNYevyPASo8CHWgNrT8TswWroRMIJGsT50rv6ws9J1LJI9ig/exec"
 }
