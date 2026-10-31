@@ -1,5 +1,5 @@
 
-const PREFIX='mauzi-'+encodeURIComponent(self.registration.scope)+'-';const CACHE=PREFIX+'4085a015ac5c9d';const FILES=[".nojekyll","assets/editor-api-BiBapoVL.js","assets/editor-api-DctGowU_.css","assets/editor-Blr_SCGW.css","assets/editor-m241oF65.js","assets/main-DhlRaHpl.js","editor.html","fonts/inter-latin-400-normal.woff2","fonts/inter-latin-500-normal.woff2","fonts/inter-latin-600-normal.woff2","fonts/inter-latin-700-normal.woff2","fonts/inter-latin-800-normal.woff2","fonts/LICENSE","fonts.css","icons/icon-192.png","icons/icon-512.png","icons/logo.png","index.html","manifest.webmanifest"];
+const PREFIX='mauzi-'+encodeURIComponent(self.registration.scope)+'-';const CACHE=PREFIX+'ab6b901efbe203';const FILES=[".nojekyll","assets/editor-api-7nS64bfZ.js","assets/editor-api-BSD4RTtg.css","assets/editor-Blr_SCGW.css","assets/editor-Cw1cGoY9.js","assets/main-D3srzyFW.js","editor.html","fonts/inter-latin-400-normal.woff2","fonts/inter-latin-500-normal.woff2","fonts/inter-latin-600-normal.woff2","fonts/inter-latin-700-normal.woff2","fonts/inter-latin-800-normal.woff2","fonts/LICENSE","fonts.css","icons/icon-192.png","icons/icon-512.png","icons/logo.png","index.html","manifest.webmanifest"];
 const local=file=>new URL(file,self.registration.scope).href;
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES.map(local))).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith(PREFIX)&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()));});
@@ -9,7 +9,4 @@ self.addEventListener('fetch',event=>{const request=event.request,url=new URL(re
  if(url.pathname.endsWith('/config.json')){event.respondWith(fetch(request,{cache:'no-store'}).then(response=>{if(response.ok){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(request,copy));}return response;}).catch(()=>caches.match(request)));return;}
  event.respondWith(caches.match(request).then(cached=>cached||fetch(request)));
 });
-self.addEventListener('push',event=>{event.waitUntil((async()=>{let payload={};try{payload=event.data.json();}catch{}const data=payload.data||payload.notification||payload;
- let url=local('./');try{const target=new URL(data.url||url);if(target.origin===self.location.origin&&target.href.startsWith(self.registration.scope))url=target.href;}catch{}
- await self.registration.showNotification(data.title||'Mauzi Plan',{body:data.body||'Tiene una actividad de Iglesia Bethel.',icon:local('icons/icon-192.png'),badge:local('icons/icon-192.png'),tag:data.tag||'mauzi-plan',data:{url},vibrate:[180,80,180],silent:false});})());});
-self.addEventListener('notificationclick',event=>{event.notification.close();event.waitUntil((async()=>{const url=event.notification.data?.url||local('./');const windows=await self.clients.matchAll({type:'window',includeUncontrolled:true});for(const client of windows){if(client.url.startsWith(self.registration.scope)){await client.navigate(url);return client.focus();}}return self.clients.openWindow(url);})());});
+
