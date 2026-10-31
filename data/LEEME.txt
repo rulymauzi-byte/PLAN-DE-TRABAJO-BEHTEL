@@ -1,0 +1,3 @@
+# Carga de datos
+
+Coloque aqui sus respaldos como 2027.json, 2028.json, etc. El proceso de publicacion detecta automaticamente los archivos numericos. No cree years.json manualmente. Si elimina un ano, desaparece de la app cuando GitHub Pages termina de publicar y el usuario actualiza o la app vuelve a verificar los archivos.
