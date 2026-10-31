@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#091322"><link rel="stylesheet" href="./fonts.css"><title>Agregar un año · Iglesia Bethel</title>  <script type="module" crossorigin src="./assets/editor-BUm2t5by.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/editor-api-BC9CWRDL.js">
-  <link rel="stylesheet" crossorigin href="./assets/editor-api-BSD4RTtg.css">
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#091322"><link rel="stylesheet" href="./fonts.css"><title>Agregar un año · Iglesia Bethel</title>  <script type="module" crossorigin src="./assets/editor-QnZhWqAo.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/editor-api-DwTpih1q.js">
+  <link rel="stylesheet" crossorigin href="./assets/editor-api-L-Ay_psn.css">
   <link rel="stylesheet" crossorigin href="./assets/editor-Blr_SCGW.css">
 </head>
 <body><main class="editor-shell">
@@ -12,7 +12,7 @@
 <div class="editor-toolbar"><label>Nuevo año <input id="newYearValue" type="number" min="2000" max="2099" placeholder="2028"></label><button id="createYear" class="button accent">Comenzar año</button><label>Borradores <select id="editYear"></select></label><button id="logoutEditor" class="button">Salir</button></div>
 <p class="fine" id="publishedYears"></p>
 <div id="draftSection" hidden>
-<section class="editor-panel"><h2 id="draftTitle"></h2><label class="field-label" for="editTitle">Título del plan</label><input id="editTitle"><div class="editor-grid"><label>Eslogan<textarea id="editSlogan" rows="2"></textarea></label><label>Objetivos específicos<textarea id="editObjectives" rows="2"></textarea></label><label>Visión<textarea id="editVision" rows="2"></textarea></label><label>Misión<textarea id="editMission" rows="2"></textarea></label></div></section>
+<section class="editor-panel"><h2 id="draftTitle"></h2><label class="field-label" for="editTitle">Título del plan</label><input id="editTitle"><div class="editor-grid"><label>Eslogan<textarea id="editSlogan" rows="2"></textarea></label><label>Objetivos específicos<textarea id="editObjectives" rows="2"></textarea></label><label>Visión<textarea id="editVision" rows="2"></textarea></label><label>Misión<textarea id="editMission" rows="2"></textarea></label><label>Objetivo general<textarea id="editGeneral" rows="2"></textarea></label><label>Ejes<textarea id="editAxes" rows="2"></textarea></label><label>Valores<textarea id="editValues" rows="2"></textarea></label><label>Doctrinas<textarea id="editDoctrine" rows="2"></textarea></label><label>Justificación<textarea id="editJustification" rows="2"></textarea></label><label>Antecedentes<textarea id="editBackground" rows="2"></textarea></label></div></section>
 <section class="editor-panel entry-panel"><h2>Formulario para agregar actividad en el mes</h2><p class="fine">Enter pasa a la siguiente casilla. Cada letra se guarda en este dispositivo.</p>
 <form id="activityForm" class="activity-form">
 <label>Mes destino<select id="editMonth"></select></label>
@@ -27,9 +27,9 @@
 </form>
 <datalist id="categorySuggestions"><option value="Consejo local"><option value="Femenil"><option value="Juvenil"><option value="Infantil"><option value="Comité canal"><option value="3 organizaciones"></datalist><datalist id="activitySuggestions"></datalist><datalist id="placeSuggestions"></datalist>
 </section>
-<section class="editor-panel"><div class="editor-toolbar"><h2 id="monthHeading"></h2><span id="rowCount" class="fine"></span></div><label class="field-label" for="monthObjectives">Objetivos específicos del mes (opcional)</label><textarea id="monthObjectives" rows="2"></textarea><div class="editor-table-wrap"><table class="editor-table"><thead><tr><th>Fecha</th><th>Hora</th><th>Actividad</th><th>Día</th><th>Lugar</th><th>Responsable</th><th>Presupuesto</th><th></th></tr></thead><tbody id="editRows"></tbody></table></div><p id="emptyMonth" class="fine">Agregue las actividades con el formulario de arriba.</p></section>
+<section class="editor-panel"><div class="editor-toolbar"><h2 id="monthHeading"></h2><span id="rowCount" class="fine"></span></div><label class="field-label" for="monthTheme">Tema a predicar del mes (opcional)</label><input id="monthTheme"><label class="field-label" for="monthObjectives">Objetivos específicos del mes (opcional)</label><textarea id="monthObjectives" rows="2"></textarea><div class="editor-table-wrap"><table class="editor-table"><thead><tr><th>Fecha</th><th>Hora</th><th>Actividad</th><th>Día</th><th>Lugar</th><th>Responsable</th><th>Presupuesto</th><th></th></tr></thead><tbody id="editRows"></tbody></table></div><p id="emptyMonth" class="fine">Agregue las actividades con el formulario de arriba.</p></section>
 <div class="editor-actions"><span id="autosaveLabel" role="status">Guardado local automático</span><button id="syncSheets" class="button accent">Enviar datos</button><button id="downloadPlan" class="button">Descargar JSON</button></div>
-<p class="fine">El borrador se recupera en este mismo navegador y dispositivo. Para llevarlo a otro equipo, descargue el JSON o envíe el año terminado. Una vez enviado, ese año queda protegido.</p>
+<p class="fine">El borrador se recupera en este mismo navegador y dispositivo. Para llevarlo a otro equipo, descargue el JSON o envíe el año terminado. Los cambios del borrador se envían automáticamente al tener conexión. «Enviar datos» publica el año terminado y lo protege.</p>
 </div>
 <label class="button file-button">Continuar desde un JSON<input id="importPlan" type="file" accept=".json" hidden></label>
 </section></main>
