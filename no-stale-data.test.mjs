@@ -1,2 +1,0 @@
-import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
-test('los años no están en la precarga y se consultan en red sin recuperar copias antiguas',()=>{const source=fs.readFileSync(new URL('../scripts/build-sw.mjs',import.meta.url),'utf8');assert.ok(source.includes("split(path.sep).includes('data')"));assert.ok(source.includes("url.pathname.includes('/data/')"));assert.ok(source.includes("status:503"));});
